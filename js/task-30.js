@@ -26,3 +26,16 @@
 //     // Пиши код выше этой строки
 //   }
   
+
+function makeTask(data) {
+  const completed = false;
+  const category = 'Общее';
+  const priority = 'Обычный';
+  // Пиши код ниже этой строки
+  
+  const newData = {completed: completed, category: category, priority: priority};
+  const cloneData = {...newData, ...data};
+  return cloneData; 
+
+  // Пиши код выше этой строки
+}
