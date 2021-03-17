@@ -57,3 +57,35 @@
 //     // Пиши код выше этой строки
 //   };
   
+const atTheOldToad = {
+    potions: [
+        { name: 'Зелье скорости', price: 460 },
+        { name: 'Дыхание дракона', price: 780 },
+        { name: 'Каменная кожа', price: 520 },
+    ],
+    // Пиши код ниже этой строки
+    getPotions() {
+        return this.potions;
+    },
+    addPotion(potionName) {
+        if(this.potions.includes(potionName)) { return }
+        else {
+            this.potions.push(potionName);
+            return this.potions;
+        }
+    },
+    removePotion(potionName) {
+        for(let i = 0; i < this.potions.length; i += 1) {
+            if(this.potions[i].name === potionName) {
+                this.potions.splice(i, 1)
+            }
+        }
+    },
+    updatePotionName(oldName, newName) {
+        for(const value of this.potions) {
+            if(value.name === oldName) {
+                value.name = newName
+            }
+        }
+    }
+}
